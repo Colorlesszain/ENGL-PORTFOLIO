@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Damion's English Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* ===== Global Styles ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* ===== Navbar ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover {
+            color: #00d4ff;
+        }
+
+	nav a {
+	    text-decoration: none;
+	    color: white;
+	}
+
+	
+	nav a:hover {
+	    color: #00d4ff;
+	}
+
+        /* ===== Main Section ===== */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+	    margin-top: 80px;
+	    padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+	.profile-image img {
+	    width: 260px;
+	    border-radius: 15px;
+	    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+	}
+
+        .card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+	    text-align: left;
+        }
+
+        /* ===== Button ===== */
+        button {
+            margin-top: 25px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00d4ff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #00aacc;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>Damion's English Portfolio</h1>
+        <ul>
+            <li onclick="scrollToAbout()">About</li>
+            <li><a href="gallery.html">Artifacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+<div class="container" id="about">
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+        My name is Damion, and I am an undergrad freshman at UConn.  
+        I study computer science & engineering. I love D&D, Minecraft,
+        and strategy games. I fell in love with coding early on 
+        because of gaming. Gaming was my stress outlet and still 
+        is, and because of the amazing games that I played growing 
+        up, I aspire to be able to create/code things that will 
+        inspire others as well. You will notice that this website 
+        is designed by me via HTML, CSS, and JavaScript. 
+        I do many other websites in the same languages. 
+        I am also studying Python and have created my own memory 
+        game based on a handful of categories, such as anime, 
+        games, and movies. I also created platformer games, 
+        an infinite asteroid shooter, and many other simple
+        /easy games just to start building my portfolio. 
+        What I lack in experience I earn back in enthusiasm and 
+        perseverance. I would be open to making more and new projects 
+        for more people.
+        </p>
+    </div>
+
+    <div class="profile-image">
+        <img src="selfie.jpeg" alt="Photo of Damion">
+    </div>
+
+</div>
+    <!-- JavaScript -->
+    <script>
+        function changeMessage() {
+            document.getElementById("extraMessage").innerText = 
+            "Welcome to my digital portfolio — more projects coming soon!";
+        }
+
+        function scrollToAbout() {
+            document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+</html>

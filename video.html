@@ -7,7 +7,7 @@
 
 <style>
 
-/* Global */
+/* ===== Global ===== */
 *{
     margin:0;
     padding:0;
@@ -20,8 +20,7 @@ body{
     color:white;
 }
 
-/* Navbar */
-/* Navbar */
+/* ===== Navbar (MATCHES YOUR OTHER PAGES) ===== */
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,7 +41,6 @@ nav ul {
 }
 
 nav ul li {
-    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -58,19 +56,23 @@ nav a {
 nav a:hover {
     color: #00d4ff;
 }
-/* Center video */
+
+/* ===== Video Section ===== */
 .video-container{
     display:flex;
     justify-content:center;
     align-items:center;
     height:80vh;
+    padding:20px;
 }
 
-/* Video styling */
-video{
-    width:70%;
-    max-width:900px;
-    border-radius:15px;
+/* Responsive YouTube Video */
+.video-container iframe{
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 15px;
     box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
 
@@ -79,19 +81,23 @@ video{
 
 <body>
 
+<!-- Navbar -->
 <nav>
     <h1>Damion's English Portfolio</h1>
     <ul>
-        <li><a href="./index.html">About Me</a></li>
-        <li><a href="./gallery.html">Artifacts</a></li>
-        <li><a href="./video.html">Video</a></li>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="gallery.html">Artifacts</a></li>
+        <li><a href="video.html">Video</a></li>
     </ul>
 </nav>
 
+<!-- Centered Video -->
 <div class="video-container">
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/9EX1hdFzOLU?si=HALYnDqgL3I1MZth" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+    <iframe 
+        src="https://www.youtube.com/embed/9EX1hdFzOLU"
+        title="YouTube video player"
+        allowfullscreen>
+    </iframe>
 </div>
 
 </body>
